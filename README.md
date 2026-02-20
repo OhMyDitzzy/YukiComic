@@ -65,7 +65,7 @@ console.log(homepage)
 ```
 
 > [!WARNING]
-> This is just an example. Methods may differ between servers. For more details, please check our [Wiki](/wiki).
+> This is just an example. Methods may differ between servers. For more details, please check our [Wiki](https://github.com/OhMyDitzzy/YukiComic/wiki).
 
 ## Contributing
 
