@@ -17,7 +17,7 @@ export class BaseServer {
 			...options.headers
 		};
 
-		return fetch(url, {
+		return fetch(encodeURI(url), {
 			...options,
 			headers,
 			signal: AbortSignal.timeout(this.config.timeout || 60000)

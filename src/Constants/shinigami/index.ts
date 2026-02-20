@@ -17,4 +17,5 @@ export const SHINIGAMI_CONFIG: BaseConfig = {
 
 export const SHINIGAMI_ROUTE = {
 	homepage: `/v1/manga`,
+	search: `/v1/manga`
 } as const
