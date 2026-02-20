@@ -1,0 +1,8 @@
+.DS_Store
+.env
+*/.DS_Store
+lib
+node_modules
+test.ts
+data.json
+coverage

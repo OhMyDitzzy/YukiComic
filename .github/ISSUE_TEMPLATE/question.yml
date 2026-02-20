@@ -1,0 +1,86 @@
+name: 💬 Question
+description: Have a question about using or contributing to YukiComic?
+title: "[QUESTION] "
+labels: ["question"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No question is a dumb question! Ask away and we'll do our best to help. 😊
+        
+        > 💡 **Tip:** Before asking, please check the [documentation](../../wiki) and [discussions](../../discussions) — your answer might already be there!
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Pre-Question Checklist
+      options:
+        - label: I have checked the README and documentation
+          required: true
+        - label: I have searched existing issues and discussions and couldn't find an answer
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 📂 Question Category
+      options:
+        - Usage / How-to
+        - Configuration
+        - Specific Server (Komiku, Shinigami, etc.)
+        - Unclear Error
+        - Contributing / Development
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: ❓ Your Question
+      description: Write your question clearly. The more detail you provide, the faster we can help!
+      placeholder: "Example: How do I use a proxy with YukiComic to avoid rate-limiting from the Shinigami server?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📋 Context / What You've Tried
+      description: Tell us what you've already tried or the context of your use case.
+      placeholder: |
+        I'm trying to use YukiComic to build a Discord bot that sends updates for new manga chapters.
+        I already tried using `setProxy()` but it didn't work because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 💻 Relevant Code (Optional)
+      description: If your question is related to code, paste it here.
+      render: javascript
+      placeholder: |
+        import { YukiComic } from 'yuki-comic'
+        // your code here...
+
+  - type: input
+    id: version
+    attributes:
+      label: 📦 YukiComic Version
+      placeholder: "v1.0.0"
+
+  - type: input
+    id: node_version
+    attributes:
+      label: 🟢 Node.js Version
+      placeholder: "v18.17.0"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📌 Additional Information
+      description: Any other information that might help answer your question.
+      placeholder: "Add any other context here..."

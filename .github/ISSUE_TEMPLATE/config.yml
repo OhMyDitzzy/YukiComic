@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions & Q&A
+    url: https://github.com/OhMyDitzzy/YukiComic/discussions
+    about: For general discussions, ideas, or casual questions, head over to GitHub Discussions!
+  - name: 📖 YukiComic Documentation
+    url: https://github.com/OhMyDitzzy/YukiComic
+    about: Check out the full YukiComic documentation before opening an issue.
+  - name: 📦 npm Package
+    url: https://www.npmjs.com/package/yuki-comic
+    about: YukiComic on the npm registry.

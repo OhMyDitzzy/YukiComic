@@ -1,0 +1,143 @@
+name: 🐛 Bug Report
+description: Report a bug or error you found in YukiComic
+title: "[BUG] "
+labels: ["bug", "needs triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out this form as thoroughly as possible so we can resolve it quickly.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Pre-Report Checklist
+      options:
+        - label: I have searched existing issues and this bug has not been reported before
+          required: true
+        - label: I am using the latest version of YukiComic
+          required: true
+        - label: I have read the documentation and README
+          required: true
+
+  - type: dropdown
+    id: server
+    attributes:
+      label: 🌐 Affected Comic Server
+      description: Which server is experiencing the bug? Select all that apply.
+      multiple: true
+      options:
+        - Komiku
+        - Shinigami ID
+        - MangaKatana
+        - Other (mention in description)
+        - All Servers
+        - Not Server-Specific (Core Library)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Bug Description
+      description: Clearly describe the bug you encountered.
+      placeholder: "Example: When fetching manga from the Komiku server, getMangaDetail() always returns null even though the manga exists..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔁 Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Install YukiComic with `npm install yukicomic`
+        2. Call the function `...`
+        3. Run with `node index.js`
+        4. Error appears at line `...`
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✨ Expected Behavior
+      description: What should have happened?
+      placeholder: "The function should return an object containing the manga details..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 💥 Actual Behavior
+      description: What actually happened?
+      placeholder: "The function returns null / throws an error / crashes..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: code_snippet
+    attributes:
+      label: 💻 Code Snippet
+      description: Paste the code that triggers the bug (optional but very helpful).
+      render: javascript
+      placeholder: |
+        import { YukiComic } from 'yuki-comic'
+
+        const comic = YukiComic.server('komiku');
+        const detail = await comic.getMangaDetail('manga-slug');
+        console.log(detail);
+
+  - type: textarea
+    id: error_log
+    attributes:
+      label: 📋 Error Log / Stack Trace
+      description: Paste the error message or stack trace that appeared.
+      render: shell
+      placeholder: |
+        Error: Cannot read properties of undefined...
+            at getMangaDetail (/node_modules/yukicomic/...)
+            at ...
+
+  - type: input
+    id: version
+    attributes:
+      label: 📦 YukiComic Version
+      description: Which version are you using? (check with `npm list yuki-comic`)
+      placeholder: "v1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node_version
+    attributes:
+      label: 🟢 Node.js Version
+      description: Which Node.js version are you using? (check with `node -v`)
+      placeholder: "v18.17.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 💻 Operating System
+      options:
+        - Windows
+        - macOS
+        - Linux (Ubuntu/Debian)
+        - Linux (Arch/Manjaro)
+        - Linux (Other)
+        - Android (Termux)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📌 Additional Information
+      description: Any other info that might be useful? Screenshots, links, etc.
+      placeholder: "Add any other relevant context here..."

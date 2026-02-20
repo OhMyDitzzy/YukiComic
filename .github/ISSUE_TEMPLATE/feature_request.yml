@@ -1,0 +1,110 @@
+name: 🚀 Feature Request
+description: Have a new idea or improvement for YukiComic? Let us know!
+title: "[FEAT] "
+labels: ["enhancement", "feature request"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Your ideas mean a lot to YukiComic's growth! Describe the feature you have in mind as clearly as possible.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Pre-Request Checklist
+      options:
+        - label: I have searched existing issues and this feature has not been requested before
+          required: true
+        - label: I have read the documentation and confirmed this feature does not already exist
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 📂 Feature Category
+      description: What category does this feature fall under?
+      options:
+        - New Comic Server
+        - Improvement to Existing Server
+        - Core Library / API
+        - Performance & Optimization
+        - Developer Experience (DX)
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: server_name
+    attributes:
+      label: 🌐 Server Name (If Requesting a New Server)
+      description: If you're requesting a new comic server, provide its name and website URL.
+      placeholder: "Example: Komiku — https://komiku.org"
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 Problem to Solve
+      description: What problem does this feature solve? Describe the context.
+      placeholder: "Example: There is currently no way to batch-download chapters, so I have to download them one by one which is very inefficient..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed Solution / Feature
+      description: Explain the feature you want in as much detail as possible.
+      placeholder: "Example: Add a `downloadChapterBatch(slugs: string[])` function that accepts an array of chapter slugs and downloads them all in parallel..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: api_design
+    attributes:
+      label: 🛠️ API Design (Optional)
+      description: If you have an idea of how the API should look, show it here!
+      render: javascript
+      placeholder: |
+        // Example of how you envision using it:
+        const comic = YukiComic.server('komiku');
+
+        const results = await comic.downloadBatch([
+          'chapter-slug-1',
+          'chapter-slug-2',
+        ], { parallel: 3 });
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives / Workarounds Tried
+      description: Is there any workaround or alternative you are currently using?
+      placeholder: "I'm currently using a regular loop but it's very slow..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🔥 How Important Is This Feature to You?
+      options:
+        - Nice to have
+        - Important (I need this often)
+        - Very Important (I almost always need this)
+        - Critical (I can't use YukiComic effectively without this)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 🙋 Contribution
+      options:
+        - label: I am willing to help implement this feature (open to PR!)
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 📌 Additional Information
+      description: References, screenshots, links, or any other relevant info.
+      placeholder: "Add any other context here..."

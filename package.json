@@ -1,0 +1,42 @@
+{
+  "name": "yuki-comic",
+  "version": "1.0.0",
+  "description": "Modular and Fully Typed comic library for TypeScript/JavaScript",
+  "keywords": [
+    "comic",
+    "api",
+    "web"
+  ],
+  "homepage": "https://github.com/OhMyDitzzy/Yuki-Comic#readme",
+  "bugs": {
+    "url": "https://github.com/OhMyDitzzy/Yuki-Comic/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/OhMyDitzzy/Yuki-Comic.git"
+  },
+  "license": "MIT",
+  "author": "Ditzzy <ditzzydev@gmail.com>",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write \"src/**/*.{ts,js,json,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "prettier": "^3.5.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
