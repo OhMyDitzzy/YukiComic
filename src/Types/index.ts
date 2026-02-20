@@ -1,4 +1,4 @@
-import type { ShinigamiResponse } from "./shinigami";
+import type { ShinigamiResponse } from './shinigami'
 
 export interface BaseConfig {
 	baseUrl: string
