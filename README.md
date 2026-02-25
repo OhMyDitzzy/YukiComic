@@ -11,61 +11,9 @@ Join our <a href="https://whatsapp.com/channel/0029Vb7AafUL7UVRIpg1Fy24"><img sr
 
 ---
 
-# YukiComic
+# Shinigami
 
-YukiComic is a Comic Scraper library with many features and a wide range of supported comic servers. It uses Node.js built-in `fetch`, which means YukiComic is **lightweight** and doesn't require many third-party dependencies.
-
-## Requirements
-- **Node.js** v18 or higher (required for built-in `fetch` support)
-
-## Installation
-
-Since comic servers may frequently update their APIs or website structure, it's recommended to install YukiComic directly from GitHub to ensure you're always using the latest version. This way, you'll get all the fixes and updates as soon as they are pushed, instead of waiting for a new npm release. **Please note, We will not be pushing this library to npm as it may be difficult to maintain stability. Make sure to choose the comic server you want to use the most and if there is a problem with the comic server you are targeting, please open an issue.**
-
-To install from GitHub, run the following command:
-
+To install this server:
 ```bash
-npm install github:OhMyDitzzy/YukiComic
+npm install github:OhMyDitzzy/YukiComic#shinigami
 ```
-
-## Features
-
-- [x] Supports multiple comic servers
-- [x] Fully Typed (TypeScript support out of the box)
-- [x] Flexible request options — customize requests to your favorite comic servers
-- [x] Automatic parsing — just call the method and get the results!
-- [ ] Batch download to any format (e.g. PDF or ZIP)
-
-## Supported Servers
-
-Here are some of the comic servers currently supported by YukiComic:
-
-| Server | Status |
-|--------|--------|
-| Shinigami | ✅ Supported |
-| ... | ... |
-
-> More servers are being added! Feel free to open an issue or contribute.
-
-## Simple Usage Example
-
-```typescript
-import { YukiComic } from "yuki-comic";
-
-// Choose your favorite comic server!
-const comic = YukiComic.server("shinigami", /* options */)
-
-// Get homepage data
-const homepage = await comic.getHomepage(/* options */)
-
-console.log(homepage)
-```
-
-> [!WARNING]
-> This is just an example. Methods may differ between servers. For more details, please check our [Wiki](https://github.com/OhMyDitzzy/YukiComic/wiki). You can also see an example of using the shinigami server in the [example](examples) folder.
-
-## Contributing
-
-Contributions are welcome! If you'd like to add support for a new server or improve the library, feel free to open a pull request or an issue.
-
-This project is licensed under the terms specified in the [LICENSE](./LICENSE) file.
