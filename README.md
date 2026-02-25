@@ -20,15 +20,12 @@ YukiComic is a Comic Scraper library with many features and a wide range of supp
 
 ## Installation
 
+Since comic servers may frequently update their APIs or website structure, it's recommended to install YukiComic directly from GitHub to ensure you're always using the latest version. This way, you'll get all the fixes and updates as soon as they are pushed, instead of waiting for a new npm release. **Please note, We will not be pushing this library to npm as it may be difficult to maintain stability. Make sure to choose the comic server you want to use the most and if there is a problem with the comic server you are targeting, please open an issue.**
+
+To install from GitHub, run the following command:
+
 ```bash
-# npm
-npm install yuki-comic
-
-# yarn
-yarn add yuki-comic
-
-# pnpm
-pnpm add yuki-comic
+npm install github:OhMyDitzzy/YukiComic
 ```
 
 ## Features
