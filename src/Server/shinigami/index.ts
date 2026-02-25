@@ -86,7 +86,7 @@ export class ShinigamiServer extends BaseServer {
 		try {
 			const response = await this.fetchWithConfig(SHINIGAMI_CONFIG.baseUrl + SHINIGAMI_ROUTE.read + `/${chapter_id}`)
 
-			const json: ShinigamiReadData = await response.json()
+			const json = await response.json()
 
 			const { base_url, base_url_low, chapter } = json.data
 
