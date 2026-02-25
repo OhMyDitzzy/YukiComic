@@ -26,7 +26,8 @@
     "test:coverage": "vitest run --coverage",
     "format": "prettier --write \"src/**/*.{ts,js,json,md}\"",
     "example": "tsx examples/shinigami/shinigami.ts",
-    "build": "tsc -P tsconfig.build.json && tsc-esm-fix --tsconfig=tsconfig.build.json --ext=.js"
+    "build": "tsc -P tsconfig.build.json && tsc-esm-fix --tsconfig=tsconfig.build.json --ext=.js",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^25.3.0",
